@@ -1,0 +1,25 @@
+{
+  "name": "ts.dll",
+  "version": "1.0.0",
+  "description": "一个天使插件的nodejs库，用js撸游戏脚本",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/hhuz/ts.dll.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "winax": "^1.12.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.7.5",
+    "tslint": "^5.20.0",
+    "tslint-config-standard": "^8.0.1",
+    "typescript": "^3.6.3"
+  }
+}
