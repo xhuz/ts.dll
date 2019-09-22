@@ -1,6 +1,16 @@
+/*
+ * @Author: huz
+ * @Date: 2019-09-21 18:19:09
+ * @LastEditTime: 2019-09-22 23:28:32
+ */
 export enum TsRet {
   Failed,
   Success
+}
+
+export enum TsSwitch {
+  Off,
+  On
 }
 
 export enum GetWindowFlag {
@@ -51,6 +61,54 @@ export enum LockMode {
   Open,
   MouseOnly,
   KeypadOnly
+}
+
+export enum TsMode {
+  Normal,
+  Advanced
+}
+
+export enum MemoryBitNum {
+  Bit32,
+  Bit16,
+  Bit8
+}
+
+export enum MemoryIntByte {
+  Byte4,
+  Byte2,
+  Byte1
+}
+
+export enum MemoryCharType {
+  Ascii,
+  Unicode
+}
+
+export enum MemoryState {
+  Writable,
+  NotWritable
+}
+export interface Coordinate {
+  x: number;
+  y: number;
+}
+
+export interface Area {
+  x1: number;
+  x2: number;
+  y1: number;
+  y2: number;
+}
+
+export interface VariantPointerParams {
+  ret: number | string;
+  [key: string]: any;
+}
+
+export interface MoveRange extends Coordinate {
+  w: number;
+  h: number;
 }
 
 export type displayMode = 'normal' | 'dx' | 'gdi' | 'gdi2' | 'dx2';

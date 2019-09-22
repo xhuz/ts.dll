@@ -1,18 +1,16 @@
 /*
  * @Author: huz
- * @Date: 2019-09-21 18:19:09
- * @LastEditTime: 2019-09-22 20:10:09
+ * @Date: 2019-09-23 00:28:31
+ * @LastEditTime: 2019-09-23 00:28:31
  */
 declare module 'winax' {
-  export const Object: Winax.Object;
-  export const Variant: typeof Winax.Variant;
+  const Object: Winax.Object;
+  const Variant: typeof Winax.Variant;
 }
-
 declare namespace Winax {
   interface Object {
     new(COM: string): any;
   }
-
   class Variant {
     constructor(val: any, type: keyof Variant.Types);
     assign(val: any): void;
@@ -20,7 +18,6 @@ declare namespace Winax {
     clear(): void;
   }
 }
-
 declare namespace Variant {
   interface Types {
     int: string;
