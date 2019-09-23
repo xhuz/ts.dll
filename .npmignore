@@ -1,0 +1,10 @@
+node_modules/
+.idea/
+.vscode/
+src/
+Ts.chm
+tsconfig.json
+tslint.json
+README.md
+.editorconfig
+.gitignore

@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "一个天使插件的nodejs库，用js撸游戏脚本",
   "main": "./dist/index.js",
+  "types": "./@types/index.d.ts",
   "scripts": {
     "build": "tsc"
   },
