@@ -2,13 +2,13 @@
   "name": "ts.dll",
   "version": "1.0.0",
   "description": "一个天使插件的nodejs库，用js撸游戏脚本",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "build": "tsc"
   },
   "repository": {
     "type": "git",
-    "url": "https://gitee.com/hhuz/ts.dll.git"
+    "url": "https://github.com/xhuz/ts.dll.git"
   },
   "keywords": ["天使", "ts.dll", "ts", "robot", "auto", "keyboard", "mouse"],
   "author": "huz",
