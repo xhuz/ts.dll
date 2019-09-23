@@ -1,6 +1,6 @@
 {
   "name": "ts.dll",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "一个天使插件的nodejs库，用js撸游戏脚本",
   "main": "./dist/index.js",
   "scripts": {
@@ -10,7 +10,15 @@
     "type": "git",
     "url": "https://github.com/xhuz/ts.dll.git"
   },
-  "keywords": ["天使", "ts.dll", "ts", "robot", "auto", "keyboard", "mouse"],
+  "keywords": [
+    "天使",
+    "ts.dll",
+    "ts",
+    "robot",
+    "auto",
+    "keyboard",
+    "mouse"
+  ],
   "author": "huz",
   "license": "ISC",
   "dependencies": {
@@ -22,7 +30,9 @@
     "tslint-config-standard": "^8.0.1",
     "typescript": "^3.6.3"
   },
-  "os": ["win32"],
+  "os": [
+    "win32"
+  ],
   "engines": {
     "node": ">=10.16.0"
   }
