@@ -30,7 +30,7 @@ const ts = new TS();
 
 commonjs
 ```
-const TS = require('ts.dll');
+const TS = require('ts.dll').default;
 const ts = new TS();
 ```
 
