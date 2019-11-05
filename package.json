@@ -1,6 +1,6 @@
 {
   "name": "ts.dll",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "一个天使插件的nodejs库，用js撸游戏脚本",
   "main": "./dist/index.js",
   "types": "./@types/index.d.ts",
