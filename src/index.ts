@@ -7,7 +7,28 @@ import * as winax from 'winax';
 import {execSync} from 'child_process';
 import {resolve} from 'path';
 import {TSInstance} from './types/plugin';
-import {TsRet, Area, GetWindowFlag, WindowStateFlag, SpecialWindowFlag, EnumWindowFilter, Coordinate, displayMode, mouseMode, keypadMode, BindWindowMode, LockMode, TsSwitch, MoveRange, VariantPointerParams, MemoryIntByte, MemoryCharType, MemoryBitNum, TsMode, MemoryState} from './modules/interface';
+import {
+  TsRet,
+  Area,
+  GetWindowFlag,
+  WindowStateFlag,
+  SpecialWindowFlag,
+  EnumWindowFilter,
+  Coordinate,
+  displayMode,
+  mouseMode,
+  keypadMode,
+  BindWindowMode,
+  LockMode,
+  TsSwitch,
+  MoveRange,
+  VariantPointerParams,
+  MemoryIntByte,
+  MemoryCharType,
+  MemoryBitNum,
+  TsMode,
+  MemoryState
+} from './modules/interface';
 
 export default class TSPlug {
   private ts: TSInstance;
@@ -87,7 +108,7 @@ export default class TSPlug {
     } else {
       ({x1, y1, x2, y2} = args[0] as Area);
     }
-    return this.getClientRect(hWnd, x1, y2, x2, y2);
+    return this.ts.GetClientRect(hWnd, x1, y1, x2, y2);
   }
 
   getForegroundWindow(): number {
@@ -195,7 +216,7 @@ export default class TSPlug {
   }
 
   downCpu(rate: number): TsRet {
-    return this.downCpu(rate);
+    return this.ts.DownCpu(rate);
   }
 
   lockInput(lock: LockMode): TsRet {
@@ -203,7 +224,7 @@ export default class TSPlug {
   }
 
   isBind(hWnd: number): TsRet {
-    return this.isBind(hWnd);
+    return this.ts.IsBind(hWnd);
   }
 
   enableRealKeypad(enable: TsSwitch): TsRet {
@@ -259,7 +280,7 @@ export default class TSPlug {
   }
 
   keyDownChar(keyName: string): TsRet {
-    return this.keyDownChar(keyName);
+    return this.ts.KeyDownChar(keyName);
   }
 
   keyUp(keyCode: number): TsRet {
@@ -267,7 +288,7 @@ export default class TSPlug {
   }
 
   keyUpChar(keyName: string): TsRet {
-    return this.keyUpChar(keyName);
+    return this.ts.KeyUpChar(keyName);
   }
 
   moveR<T = number>(rx: T, ry: T): TsRet;
@@ -543,7 +564,7 @@ export default class TSPlug {
     } else {
       ({x1, y1, x2, y2} = args[0] as Area);
     }
-    return this.ts.GetScreenData(x1, x2, y1, x2);
+    return this.ts.GetScreenData(x1, y1, x2, y2);
   }
 
   cmpColor<T = number>(color: string, sim: T, x: T, y: T): TsRet;
@@ -753,6 +774,7 @@ export default class TSPlug {
   checkUAC(): TsRet {
     return this.ts.CheckUAC();
   }
+
   setUAC(enable: TsSwitch): TsRet {
     return this.ts.SetUAC(enable);
   }
@@ -777,6 +799,7 @@ export default class TSPlug {
   asmCall(hWnd: number, mode: TsMode): number {
     return this.ts.AsmCall(hWnd, mode);
   }
+
   // 保护
   tsGuardProtect(enable: TsSwitch, type: string): TsRet {
     return this.ts.TSGuardProtect(enable, type);
@@ -886,6 +909,7 @@ export default class TSPlug {
   stringToData(value: string, type: MemoryCharType): string {
     return this.ts.StringToData(value, type);
   }
+
   intToData(value: number, type: MemoryIntByte): string {
     return this.ts.IntToData(value, type);
   }
@@ -893,8 +917,9 @@ export default class TSPlug {
   floatToData(value: number): string {
     return this.ts.FloatToData(value);
   }
+
   doubleToData(value: number): string {
-    return this.doubleToData(value);
+    return this.ts.DoubleToData(value);
   }
 
   virtualAllocEx(hWnd: number, address: string, size: number, type: MemoryState): number {

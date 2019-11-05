@@ -4,5 +4,8 @@
       "semicolon": true,
       "space-before-function-paren": false,
       "object-curly-spacing": false
+    },
+    "linterOptions": {
+      "exclude": ["node_modules"]
     }
 }
